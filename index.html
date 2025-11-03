@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sound Wave Music — DJ Mixes • Events • Good Vibes</title>
+  <meta name="description" content="Sound Wave Music is the trade name for DJ mixes, events, and creative audio projects—formerly presented as Phantom Records. Same services, fresh wave." />
+  <meta property="og:title" content="Sound Wave Music" />
+  <meta property="og:description" content="DJ mixes that create good vibes—sound waves you can feel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/og-sound-wave-music.jpg" />
+  <meta name="theme-color" content="#6B5BFF" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b0b12;            /* deep space */
+      --card:#121225;          /* panels */
+      --ink:#e8e8ff;           /* primary text */
+      --muted:#b7b7d6;         /* secondary text */
+      --accent:#6B5BFF;        /* indigo */
+      --accent-2:#32D5FF;      /* aqua */
+      --accent-3:#FF7AC6;      /* pink */
+      --lime:#A7F36A;          /* lime pop */
+      --shadow: 0 10px 30px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+      color:var(--ink); background:radial-gradient(1200px 800px at 85% -10%, rgba(107,91,255,.25), transparent 60%),
+                         radial-gradient(900px 700px at -10% 10%, rgba(50,213,255,.18), transparent 60%),
+                         var(--bg);
+    }
+    a{color:var(--accent-2); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px);
+      background:linear-gradient(180deg, rgba(11,11,18,.9), rgba(11,11,18,.5) 60%, transparent);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
+    .logo{
+      width:38px; height:38px; border-radius:50%;
+      background:conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+      box-shadow:0 0 0 4px rgba(255,255,255,.06), 0 6px 18px rgba(0,0,0,.5);
+    }
+    .brand small{display:block; font-weight:600; color:var(--muted); margin-top:-6px}
+
+    /* nav links */
+    .links{display:flex; gap:18px; align-items:center}
+    .links a{color:var(--ink); opacity:.8; font-weight:600}
+    .links a:hover{opacity:1}
+    .cta{display:inline-flex; align-items:center; gap:10px; background:linear-gradient(90deg, var(--accent), var(--accent-2));
+         color:#0b0b12; padding:10px 14px; border-radius:12px; font-weight:800; box-shadow:var(--shadow)}
+
+    /* hero */
+    .hero{position:relative; padding:72px 0 40px}
+    .hero h1{font-size:clamp(34px, 4.6vw, 56px); line-height:1.1; margin:0 0 12px}
+    .hero p{max-width:62ch; color:var(--muted); margin:0 0 24px}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border-radius:999px; margin-bottom:16px;
+      background:linear-gradient(90deg, rgba(107,91,255,.18), rgba(50,213,255,.18)); border:1px solid rgba(255,255,255,.1);
+      font-weight:700; color:#e9e9ff; letter-spacing:.2px
+    }
+    .waves{position:absolute; inset:auto 0 -1px 0; height:140px; overflow:hidden; pointer-events:none}
+    .waveline{position:absolute; width:160%; left:-30%; height:1px; background:linear-gradient(90deg, transparent, var(--accent-2), var(--accent), transparent); opacity:.6}
+    .waveline:nth-child(1){top:30px; animation:scroll 9s linear infinite}
+    .waveline:nth-child(2){top:60px; opacity:.35; animation:scroll 12s linear infinite reverse}
+    .waveline:nth-child(3){top:90px; opacity:.18; animation:scroll 18s linear infinite}
+    @keyframes scroll{from{transform:translateX(0)} to{transform:translateX(-20%)} }
+
+    /* section shells */
+    section{padding:72px 0}
+    h2{font-size:clamp(22px, 3.2vw, 34px); margin:0 0 18px}
+    .grid{display:grid; gap:18px}
+    @media (min-width:800px){.grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+          border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+    .chip{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(167,243,106,.12); color:var(--lime); font-weight:800; font-size:.9rem}
+
+    /* mixes gallery */
+    .mix{
+      border-radius:var(--radius); overflow:hidden; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08);
+    }
+    .mix .thumb{aspect-ratio:16/9; width:100%; background:linear-gradient(120deg, rgba(107,91,255,.35), rgba(50,213,255,.35)); display:grid; place-items:center}
+    .mix .thumb svg{width:68px; height:68px; opacity:.9}
+    .mix .body{padding:16px}
+    .mix .meta{display:flex; justify-content:space-between; color:var(--muted); font-size:.9rem}
+
+    /* notice */
+    .notice{font-size:.95rem; color:var(--muted)}
+
+    /* footer */
+    footer{padding:44px 0; border-top:1px solid rgba(255,255,255,.08); color:var(--muted)}
+
+    /* mobile nav */
+    .menu-btn{display:inline-flex; gap:8px; align-items:center; padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.03)}
+    .hamburger{width:18px; height:2px; background:#fff; position:relative}
+    .hamburger:before,.hamburger:after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff}
+    .hamburger:before{top:-6px} .hamburger:after{top:6px}
+    .links.mobile{display:none}
+    @media (max-width:720px){.links.desktop{display:none} .links.mobile{display:grid; gap:10px; padding:12px 0}}
+  
+    /* --- CC icons & footer polish --- */
+    .cc-icons{display:flex;gap:10px;align-items:center;margin-top:8px;opacity:.9}
+    .cc-icons svg{width:1.35em;height:1.35em;display:block;opacity:.9;transition:transform .25s ease, opacity .25s ease}
+    .cc-icons svg:nth-child(1){color:var(--ink)}         /* CC */
+    .cc-icons svg:nth-child(2){color:var(--accent-2)}    /* BY */
+    .cc-icons svg:nth-child(3){color:var(--accent)}      /* NC */
+    .cc-icons svg:nth-child(4){color:var(--accent-3)}    /* ND */
+    .cc-icons:hover svg{opacity:1}
+    .cc-icons svg:nth-child(1){animation:floaty 4.5s ease-in-out infinite}
+    .cc-icons svg:nth-child(2){animation:floaty 4.8s ease-in-out infinite .05s}
+    .cc-icons svg:nth-child(3){animation:floaty 5.1s ease-in-out infinite .1s}
+    .cc-icons svg:nth-child(4){animation:floaty 5.4s ease-in-out infinite .15s}
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-2px)}100%{transform:translateY(0)}}
+
+    /* Back-compat if icons were added as <img> instead of inline SVG */
+    .cc-icons img{width:1.35em;height:auto;opacity:.9;transition:opacity .25s ease, transform .25s ease}
+    .cc-icons img:hover{opacity:1}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div>Sound Wave Music</div>
+          <small>formerly Phantom Records (trade name)</small>
+        </div>
+      </div>
+      <nav>
+        <div class="links desktop">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#mixes">Mixes</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="#contact" aria-label="Book a set">Book a Set ↗</a>
+        </div>
+        <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('mnav').toggleAttribute('data-open')">
+          <span class="hamburger" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </nav>
+    </div>
+    <div id="mnav" class="wrap links mobile" data-open="">
+      <a href="#about" onclick="this.parentElement.removeAttribute('data-open')">About</a>
+      <a href="#services" onclick="this.parentElement.removeAttribute('data-open')">Services</a>
+      <a href="#mixes" onclick="this.parentElement.removeAttribute('data-open')">Mixes</a>
+      <a href="#contact" onclick="this.parentElement.removeAttribute('data-open')">Contact</a>
+      <a class="cta" href="#contact" onclick="this.parentElement.removeAttribute('data-open')">Book a Set ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="pill">Good vibes, visual waves ✦</span>
+        <h1>DJ mixes and audio experiences that resonate like <em>sound waves</em>.</h1>
+        <p>
+          Sound Wave Music is a colorful, responsive home for my DJ mixes, event services, and creative audio projects.
+          It's the same expertise you know from Phantom Records—re-tuned under a fresh trade name that reflects what the
+          music does: send waves of energy through a room.
+        </p>
+        <a class="cta" href="#mixes">Listen to Featured Mixes ▶</a>
+      </div>
+      <div class="waves" aria-hidden="true">
+        <div class="waveline"></div>
+        <div class="waveline"></div>
+        <div class="waveline"></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap grid cols-2">
+        <div class="card">
+          <h2>About Sound Wave Music</h2>
+          <p>
+            Replace this paragraph with your existing “About” copy from PhantomRecords.com. You can paste it here without
+            legal-entity wording—Sound Wave Music is a <strong>trade name</strong> used for branding. Keep any history
+            and mission statements as-is, just swap the name.
+          </p>
+          <p class="notice">Notice: “Sound Wave Music” is a trade name/DBA used for marketing and does not denote a separate legal entity.</p>
+        </div>
+        <div class="card">
+          <h2>What Makes Our Sound Different</h2>
+          <p>
+            Talk briefly about vibe design: track selection, segues, BPM journeys, genre blends, and your philosophy of
+            building rooms where people feel welcome and energized.
+          </p>
+          <div class="chip">Good Vibes Only</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <h2>Services</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3>DJ Sets & Events</h3>
+            <p>Clubs, lounges, private events. Professional sound and curated journeys. Add your exact service points and rates, if desired.</p>
+          </div>
+          <div class="card">
+            <h3>Custom Mixes</h3>
+            <p>Commission themed mixes for workouts, product launches, and brand activations. Delivery as MP3/WAV.</p>
+          </div>
+          <div class="card">
+            <h3>Audio Branding</h3>
+            <p>Stingers, idents, and loopable beds that match your brand DNA. Perfect for podcasts and reels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mixes">
+      <div class="wrap">
+        <h2>Featured Mixes</h2>
+        <div class="grid cols-3">
+          <!-- Repeat these .mix cards per item; link to your existing audio host or files -->
+          <article class="mix">
+            <a class="thumb" href="#" aria-label="Play mix one">
+              <!-- simple waveform icon -->
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="26" width="4" height="12" rx="2" fill="currentColor"/>
+                <rect x="14" y="18" width="4" height="28" rx="2" fill="currentColor"/>
+                <rect x="22" y="10" width="4" height="44" rx="2" fill="currentColor"/>
+                <rect x="30" y="20" width="4" height="24" rx="2" fill="currentColor"/>
+                <rect x="38" y="14" width="4" height="36" rx="2" fill="currentColor"/>
+                <rect x="46" y="22" width="4" height="20" rx="2" fill="currentColor"/>
+                <rect x="54" y="28" width="4" height="8" rx="2" fill="currentColor"/>
+              </svg>
+            </a>
+            <div class="body">
+              <strong>Good Vibes Vol. 1</strong>
+              <div class="meta"><span>62 min</span><a href="#">Play ▶</a></div>
+            </div>
+          </article>
+          <article class="mix">
+            <a class="thumb" href="#" aria-label="Play mix two">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="26" width="4" height="12" rx="2" fill="currentColor"/>
+                <rect x="14" y="18" width="4" height="28" rx="2" fill="currentColor"/>
+                <rect x="22" y="10" width="4" height="44" rx="2" fill="currentColor"/>
+                <rect x="30" y="20" width="4" height="24" rx="2" fill="currentColor"/>
+                <rect x="38" y="14" width="4" height="36" rx="2" fill="currentColor"/>
+                <rect x="46" y="22" width="4" height="20" rx="2" fill="currentColor"/>
+                <rect x="54" y="28" width="4" height="8" rx="2" fill="currentColor"/>
+              </svg>
+            </a>
+            <div class="body">
+              <strong>City Lights Set</strong>
+              <div class="meta"><span>74 min</span><a href="#">Play ▶</a></div>
+            </div>
+          </article>
+          <article class="mix">
+            <a class="thumb" href="#" aria-label="Play mix three">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="26" width="4" height="12" rx="2" fill="currentColor"/>
+                <rect x="14" y="18" width="4" height="28" rx="2" fill="currentColor"/>
+                <rect x="22" y="10" width="4" height="44" rx="2" fill="currentColor"/>
+                <rect x="30" y="20" width="4" height="24" rx="2" fill="currentColor"/>
+                <rect x="38" y="14" width="4" height="36" rx="2" fill="currentColor"/>
+                <rect x="46" y="22" width="4" height="20" rx="2" fill="currentColor"/>
+                <rect x="54" y="28" width="4" height="8" rx="2" fill="currentColor"/>
+              </svg>
+            </a>
+            <div class="body">
+              <strong>Sunset Drive</strong>
+              <div class="meta"><span>58 min</span><a href="#">Play ▶</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap grid cols-2">
+        <div class="card">
+          <h2>Bookings & Inquiries</h2>
+          <p>Use your existing contact language from PhantomRecords.com here. Add a booking form later if desired.</p>
+          <p>
+            Email: <a href="mailto:info@soundwavemusic.example">info@soundwavemusic.example</a><br/>
+            Instagram: <a href="#">@soundwavemusic</a> · Mixes: <a href="#">Your Mix Host</a>
+          </p>
+        </div>
+        <div class="card">
+          <h2>Trade Name Notice</h2>
+          <p class="notice">“Sound Wave Music” is used solely as a trade name (DBA). Where legal/contractual language is required, reference your actual entity name and jurisdiction. Prior materials may refer to “Phantom Records.”</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> Sound Wave Music · All rights reserved.</div>
+      <div class="notice">Licensed under CC BY-NC-ND 4.0 — No commercial use. No derivatives.</div>
+      <div class="notice">Built with ❤️, gradients, and waves. Accessibility-checked.</div>
+
+      <!-- Creative Commons icons: BY • NC • ND -->
+      <div class="cc-icons" aria-label="Creative Commons BY-NC-ND 4.0">
+        <!-- CC mark -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" role="img"><title>Creative Commons</title><path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.262 10.262 0 0 0 12 1.75zm0 18.5A8.25 8.25 0 1 1 20.25 12 8.259 8.259 0 0 1 12 20.25z"/><path d="M9.985 9.274c-.815 0-1.354.26-1.837.855l-1.16-.95c.754-.972 1.78-1.447 2.997-1.447 1.86 0 3.28 1.272 3.28 3.42 0 2.11-1.35 3.467-3.264 3.467-1.237 0-2.257-.466-3.01-1.43l1.157-.927c.475.596 1.028.864 1.824.864 1.095 0 1.822-.817 1.822-1.968 0-1.143-.727-1.912-1.81-1.912zM15.985 9.274c-.815 0-1.354.26-1.837.855l-1.16-.95c.754-.972 1.78-1.447 2.997-1.447 1.86 0 3.28 1.272 3.28 3.42 0 2.11-1.35 3.467-3.264 3.467-1.237 0-2.257-.466-3.01-1.43l1.157-.927c.475.596 1.028.864 1.824.864 1.095 0 1.822-.817 1.822-1.968 0-1.143-.727-1.912-1.81-1.912z"/></svg>
+        <!-- BY -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" role="img"><title>Attribution (BY)</title><path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.26 10.26 0 0 0 12 1.75zm0 18.5A8.25 8.25 0 1 1 20.25 12 8.259 8.259 0 0 1 12 20.25z"/><path d="M12 5.75a2.25 2.25 0 1 0 2.25 2.25A2.253 2.253 0 0 0 12 5.75zm0 3.5a1.25 1.25 0 1 1 1.25-1.25A1.251 1.251 0 0 1 12 9.25zM12 11a2.75 2.75 0 0 0-2.75 2.75v3.5h1.5v-3.5a1.25 1.25 0 0 1 2.5 0v3.5h1.5v-3.5A2.75 2.75 0 0 0 12 11z"/></svg>
+        <!-- NC -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" role="img"><title>Non-Commercial (NC)</title><path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.27 10.27 0 0 0 12 1.75zm0 18.5A8.25 8.25 0 1 1 20.25 12 8.259 8.259 0 0 1 12 20.25z"/><path d="M15.25 13.5a3.25 3.25 0 1 1-3.25-3.25" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7.75 7.75l8.5 8.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        <!-- ND -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" role="img"><title>No Derivatives (ND)</title><path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.27 10.27 0 0 0 12 1.75zm0 18.5A8.25 8.25 0 1 1 20.25 12 8.259 8.259 0 0 1 12 20.25z"/><path d="M7 9h10M7 15h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // simple mobile menu open/close
+    const mnav = document.getElementById('mnav');
+    const observer = new MutationObserver(() => { mnav.style.display = mnav.hasAttribute('data-open') ? 'grid' : 'none'; });
+    observer.observe(mnav, { attributes: true });
+    mnav.style.display = 'none';
+  </script>
+</body>
+</html>
