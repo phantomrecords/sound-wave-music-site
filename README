@@ -1,0 +1,23 @@
+# Sound Wave Music — Site
+
+A colorful, fully responsive **one-page** website for **Sound Wave Music**  
+*(trade name, formerly Phantom Records)* — built with plain HTML/CSS/JS and ready for GitHub Pages.
+
+## Features
+- Sticky header + mobile menu
+- Animated “wave lines” hero
+- Sections: About, Services, Featured Mixes, Contact
+- Accessibility-minded: semantic HTML, high-contrast text
+- No build tools or dependencies required
+
+## Trade Name Notice
+“**Sound Wave Music**” is used solely as a **trade name (DBA)**.  
+For contracts, invoices, and legal references, use your actual entity name and jurisdiction.  
+Prior materials may refer to **Phantom Records**.
+
+## Quick Start
+```bash
+git clone https://github.com/<you>/sound-wave-music-site.git
+cd sound-wave-music-site
+# Open locally
+open index.html   # macOS
