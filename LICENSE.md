@@ -1,40 +1,32 @@
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+# Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
 
-Copyright (c) 2025 Michael Widener
+## Disclaimer
+Creative Commons Corporation ("Creative Commons") is not a law firm and does not provide legal services or advice. Distribution of Creative Commons public licenses does not create a lawyer‑client or other relationship. Creative Commons makes its licenses and related information available on an “as‑is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use.
 
-By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License ("Public License"). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.
+## Using Creative Commons Public Licenses
+Creative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below.
 
-Section 1 — Definitions.
+### Considerations for Licensors
+Our public licenses are intended for use by those authorized to give the public permission to use material in ways otherwise restricted by copyright and certain other rights. Our licenses are irrevocable. Licensors should read and understand the terms and conditions of the license they choose before applying it. Licensors should also secure all rights necessary before applying our licenses so that the public can reuse the material as expected. Licensors should clearly mark any material not subject to the license. This includes other CC‑licensed material, or material used under an exception or limitation to copyright. More considerations for licensors: https://creativecommons.org/share-your-work/
 
-(a) "Adapted Material" means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified.
+### Considerations for the Public
+By using one of our public licenses, a licensor grants the public permission to use the licensed material under specified terms and conditions. If the licensor’s permission is not necessary for any reason—for example, because of an applicable exception or limitation to copyright—then that use is not regulated by the license. Our licenses grant only permissions under copyright and certain other rights that a licensor has authority to grant. Other rights may apply, such as publicity, privacy, or moral rights. Use of the licensed material may still be restricted for other reasons, including because others have copyright or other rights in the material. A licensor may make special requests, such as asking that all changes be marked or described. Although not required by the license, you are encouraged to respect those requests where reasonable.
 
-(b) "Commercial Use" means use that is primarily intended for or directed toward commercial advantage or monetary compensation.
+## Summary of **Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International** (**CC BY‑NC‑ND 4.0**)
+This repository’s **creative content** — including text, images, audio, video, page designs, artwork, and other non‑software files — is licensed under **CC BY‑NC‑ND 4.0**.
 
-(c) "Licensed Material" means the artistic, audio, visual, and literary content in this repository unless otherwise marked.
+- **You are free to**: **Share** — copy and redistribute the material in any medium or format.
+- **Under the following terms**:
+  - **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+  - **NonCommercial** — You may not use the material for commercial purposes without explicit permission from the rights holder.
+  - **NoDerivatives** — If you remix, transform, or build upon the material, you may **not** distribute the modified material.
+- **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
-(d) "Licensor" means the copyright holder, Michael Widener.
+**Scope.** This license applies to the non‑software creative content in this repository and its GitHub Pages site. Software source code, if present, is **not** covered by this license unless a file or directory explicitly says otherwise (for example, with its own LICENSE file).  
+**No warranties.** The work is provided “as is,” without warranties or conditions of any kind, either express or implied.
 
-Section 2 — Scope.
-
-Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to reproduce and share the Licensed Material, in whole and unmodified form, for strictly non-commercial purposes, provided that attribution is given to the Licensor as follows:
-
-"Sound Wave Music — © 2025 Michael Widener — Used under CC BY-NC-ND 4.0"
-
-Section 3 — Restrictions.
-
-(a) **No Commercial Use** — You may not use the Licensed Material for commercial purposes.
-
-(b) **No Derivatives** — You may not modify, adapt, remix, transform, or build upon the Licensed Material.
-
-(c) **Attribution Required** — You must include the attribution notice above in all public copies or distributions.
-
-Section 4 — No Warranty.
-
-THE LICENSED MATERIAL IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. THE LICENSOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE OF THE LICENSED MATERIAL.
-
-Section 5 — Termination.
-
-If You fail to comply with any terms of this License, it terminates automatically.
-
-Full legal text available at:
+## Full Legal Code
+The full official legal code for the **Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International Public License** can be found at:  
 https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+This repository is licensed under the **CC BY‑NC‑ND 4.0** license.
